@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="model">
+      <form class="form">
+        <p class="p1">Registration</p>
+        <div>
+          <div class="divv left">
+            <div class="form-group">
+              <label for="Name">Full Name</label>
+              <input id="Name" type="text" placeholder=" Enter your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder=" Enter your email" />
+            </div>
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input id="Password" type="password" placeholder=" Enter your password"/>
+            </div>
+          </div>
+          <div class="divv right">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" type="text" placeholder=" Enter your username"/>
+            </div>
+            <div class="form-group">
+              <label for="Phone">Phone number</label>
+              <input id="Phone" type="number" placeholder=" Enter your Phone number" />
+            </div>
+            <div class="form-group">
+              <label for="confirm">Confirm Password</label>
+              <input id="confirm" type="password" placeholder=" Enter your password" />
+            </div>
+          </div>
+        </div>
+        <div class="section2">
+          <p class="p2">Gender</p>
+          <div class="check">
+            <input type="radio"  name="gender" id="Male" />
+            <label for="Male" class="label">Male</label>
+          </div>
+          <div class="check">
+            <input type="radio" name="gender" id="Female" />
+            <label for="Female" class="label">Female</label>
+          </div>
+          <div class="check">
+            <input type="radio" name="gender" id="Prefer" />
+            <label for="Prefer" class="label">Prefer not to say</label>
+          </div>
+        </div>
+        <button type="submit">Register</button>
+        <!-- <button type="reset">Clear</button> -->
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
