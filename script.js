@@ -1,3 +1,5 @@
+var person = {};
+
 var Confirm = document.getElementById("confirm");
 var Email = document.getElementById("email");
 var Female = document.getElementById("Female");
@@ -5,10 +7,10 @@ var Male = document.getElementById("Male");
 var Password = document.getElementById("Password");
 var Phone_number = document.getElementById("Phone");
 var Prefer = document.getElementById("Prefer");
-var fullName = document.getElementById("Name");
+var fullName1 = document.getElementById("Name");
 var gender = "";
 var register = document.getElementById("register");
-var userName = document.getElementById("username");
+var userName1 = document.getElementById("username");
 
 Female.addEventListener("click", check_radius1);
 Male.addEventListener("click", check_radius2);
@@ -26,11 +28,24 @@ function check_radius3() {
 }
 
 function validation() {
-  if (fullName.value.length < 6) {
+  person.Confirm = Confirm.value;
+  person.Email = Email.value;
+  person.Female = Female.value;
+  person.Male = Male.value;
+  person.Password = Password.value;
+  person.Phone_number = Phone_number.value;
+  person.Prefer = Prefer.value;
+  person.gender = gender.value;
+  person.register = register.value;
+  person.userName1 = userName1.value;
+  person.fullName1 = fullName1.value;
+
+  if (fullName1.value.length < 6) {
     alert("Error , fullname must be at least 6 characters!");
     return false;
   }
-  if (userName.value.length < 4) {
+  if (userName1.value.length < 4) {
+    console.log(fullName1.value);
     alert("Error , username must be at least 4 characters!");
     return false;
   }
@@ -63,7 +78,6 @@ function validation() {
 
   second = second.join("");
   second = second.toLocaleLowerCase();
-  console.log(second);
   if (!array1.includes(second)) {
     alert("Email extension is incorrect");
     return false;
@@ -76,6 +90,7 @@ function validation() {
 
   if (Password.value != Confirm.value) {
     alert("Error , Password does not match!");
+    return false;
     // validation();
   }
 
@@ -84,6 +99,8 @@ function validation() {
     Confirm.value = "";
     return false;
   }
-
   alert("Success registration");
+  const json1 = JSON.stringify(person);
+  console.log(json1);
+  alert(JSON.stringify(person));
 }
