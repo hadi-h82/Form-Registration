@@ -11,55 +11,148 @@
     <div class="model">
       <form class="form">
         <p class="p1">Registration</p>
-        <div>
+        <div class="div">
           <div class="divv left">
             <div class="form-group">
               <label for="Name">Full Name</label>
-              <input id="Name" type="text" placeholder=" Enter your name" required />
+              <input
+                id="Name"
+                type="text"
+                placeholder=" Enter your name"
+                required
+                name="Name"
+              />
+              <div class="pp" id="error1">-</div>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder=" Enter your email" required/>
+              <input
+                id="email"
+                type="email"
+                placeholder=" Enter your email"
+                required
+                name="email"
+              />
+              <p class="pp" id="error3">-</p>
             </div>
             <div class="form-group">
               <label for="Password">Password</label>
-              <input id="Password" type="password" placeholder=" Enter your password" required/>
+              <input
+                id="Password"
+                type="password"
+                placeholder=" Enter your password"
+                required
+                name="password"
+              />
+              <div class="pp" id="error4">-</div>
             </div>
           </div>
           <div class="divv right">
             <div class="form-group">
               <label for="username">Username</label>
-              <input id="username" type="text" placeholder=" Enter your username" required/>
+              <input
+                id="username"
+                type="text"
+                placeholder=" Enter your username"
+                required
+                name="Username"
+              />
+              <div class="pp" id="error2">-</div>
             </div>
             <div class="form-group">
               <label for="Phone">Phone number</label>
-              <input id="Phone" type="number" placeholder=" Enter your Phone number" />
+              <input
+                id="Phone"
+                type="number"
+                placeholder=" Enter your Phone number"
+                name="Phone number"
+              />
+              <div class="pp">-</div>
             </div>
             <div class="form-group">
               <label for="confirm">Confirm Password</label>
-              <input id="confirm" type="password" placeholder=" Enter your password" required/>
+              <input
+                id="confirm"
+                type="password"
+                placeholder=" Enter your password"
+                required
+              />
+              <div class="pp" id="error5">-</div>
             </div>
           </div>
         </div>
         <div class="section2">
-          <p class="p2">Gender</p>
+          <div><p class="p2">Gender</p></div>
           <div class="check">
-            <input type="radio"  name="gender" id="Male"  />
+            <input type="radio" name="gender" id="Male" required/>
             <label for="Male" class="label">Male</label>
           </div>
           <div class="check">
-            <input type="radio" name="gender" id="Female" />
+            <input type="radio" name="gender" id="Female" required/>
             <label for="Female" class="label">Female</label>
           </div>
           <div class="check">
-            <input type="radio" name="gender" id="Prefer" />
+            <input type="radio" name="gender" id="Prefer" required/>
             <label for="Prefer" class="label">Prefer not to say</label>
           </div>
         </div>
+        <div id="errorgender" >-</div>
         <button type="submit" id="register">Register</button>
-        <!-- <button type="reset">Clear</button> -->
       </form>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+<div style="display: none">
+  <svg
+    version="1.1"
+    id="Capa_1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    viewBox="0 0 50 50"
+    style="enable-background: new 0 0 50 50"
+    xml:space="preserve"
+  >
+    <circle style="fill: #d75a4a" cx="25" cy="25" r="25" />
+    <polyline
+      style="
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      "
+      points="16,34 25,25 34,16 
+	"
+    />
+    <polyline
+      style="
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      "
+      points="16,16 25,25 34,34 
+	"
+    />
+  </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="ok"
+    viewBox="0 0 48 48"
+    width="20px"
+    height="20px"
+  >
+    <path
+      fill="#4caf50"
+      d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+    />
+    <path
+      fill="#ccff90"
+      d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+    />
+  </svg>
+</div>

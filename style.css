@@ -44,7 +44,7 @@ label {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  /* margin-bottom: 0; */
 }
 
 input[type="text"],
@@ -60,6 +60,11 @@ input[type="email"] {
   font-size: 18px;
   color: #586575;
 }
+
+/* input[type="text"]{
+  position: relative;
+} */
+
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -87,6 +92,10 @@ button {
   width: 100%;
   height: 50px;
   font-size: 20px;
+  transition: background 0.5s;
+}
+button:hover {
+  background: rgb(34, 49, 189);;
 }
 
 .p1 {
@@ -99,11 +108,19 @@ button {
   margin-bottom: 10px;
 }
 
+.pp {
+  color: #dd0b0b;
+  height: 16px;
+  /* margin-bottom: 0px; */
+}
+
+
 .divv {
   /* background-color: aqua; */
   display: inline-block;
   width: 370px;
 }
+
 
 .label {
   display: inline;
@@ -113,5 +130,12 @@ button {
   margin-right: 110px;
 }
 .section2 {
-  margin-bottom: 20px;
+  margin-bottom: -2px;
+}
+.svg1 {
+  width: 20px;
+  height: 15px;
+}
+.svg2 {
+  height: 20px;
 }
