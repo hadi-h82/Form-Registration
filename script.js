@@ -33,6 +33,17 @@ function checkRadius3() {
     "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
 }
 
+function showError(value) {
+  document.getElementById(value).innerHTML =
+    "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
+    "incorrect value";
+}
+
+function showVlid(value) {
+  document.getElementById(value).innerHTML =
+    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+}
+
 function validation() {
   var person = {
     confirm: confirm1.value,
@@ -46,55 +57,38 @@ function validation() {
 
   if (fullName1.value.length < 6) {
     fullName1.value = "";
-    document.getElementById("error1").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("error1");
     return false;
   }
-  document.getElementById("error1").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  showVlid("error1");  
   if (userName1.value.length < 4) {
-    document.getElementById("error2").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("error2");
     userName1.value = "";
     return false;
   }
   var validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  document.getElementById("error2").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  showVlid("error2");  
   if (!email.value.match(validRegex)) {
-    document.getElementById("error3").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("error3");
     email.value = "";
     return false;
   }
-  document.getElementById("error3").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  showVlid("error3");  
   if (password.value.length < 8) {
-    document.getElementById("error4").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("error4");  
     password.value = "";
     return false;
   }
-  document.getElementById("error4").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  showVlid("error4");  
   if (password.value !== confirm1.value) {
-    document.getElementById("error5").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("error5");  
     confirm1.value = "";
     return false;
   }
-  document.getElementById("error5").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  showVlid("error5");  
   if (gender == "") {
-    document.getElementById("errorgender").innerHTML =
-      "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
-      "incorrect value";
+    showError("errorgender");  
     return false;
   }
   
