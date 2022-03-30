@@ -13,24 +13,40 @@ var userName1 = document.getElementById("username");
 female.addEventListener("click", checkRadius1);
 male.addEventListener("click", checkRadius2);
 prefer.addEventListener("click", checkRadius3);
-register.addEventListener("click", validation);
+register.addEventListener("click", changeValue);
+fullName1.addEventListener("click", validation);
+userName1.addEventListener("click", validation);
+email.addEventListener("click", validation);
+password.addEventListener("click", validation);
+confirm1.addEventListener("click", validation);
+
+function changeValue() {
+  register.value = "run";
+  validation();
+}
 
 function checkRadius1() {
   gender = "Female";
-  document.getElementById("errorgender").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  document.getElementById("errorgender").innerHTML = "-";
+  empty();
+  validation();
 }
 
 function checkRadius2() {
   gender = "Male";
-  document.getElementById("errorgender").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  document.getElementById("errorgender").innerHTML = "-";
+  empty();
+  validation();
 }
 
 function checkRadius3() {
   gender = "Prefer";
-  document.getElementById("errorgender").innerHTML =
-    "<span><svg class='svg2'><use xlink:href='#ok'></use></svg></span>";
+  empty();
+  validation();
+}
+
+function empty() {
+  document.getElementById("errorgender").innerHTML = "-";
 }
 
 function showError(value) {
@@ -60,7 +76,7 @@ function validation() {
     showError("error1");
     return false;
   }
-  showVlid("error1");  
+  showVlid("error1");
   if (userName1.value.length < 4) {
     showError("error2");
     userName1.value = "";
@@ -68,33 +84,34 @@ function validation() {
   }
   var validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  showVlid("error2");  
+  showVlid("error2");
   if (!email.value.match(validRegex)) {
     showError("error3");
     email.value = "";
     return false;
   }
-  showVlid("error3");  
+  showVlid("error3");
   if (password.value.length < 8) {
-    showError("error4");  
+    showError("error4");
     password.value = "";
     return false;
   }
-  showVlid("error4");  
+  showVlid("error4");
   if (password.value !== confirm1.value) {
-    showError("error5");  
+    showError("error5");
     confirm1.value = "";
     return false;
   }
-  showVlid("error5");  
+  showVlid("error5");
   if (gender == "") {
-    showError("errorgender");  
+    showError("errorgender");
     return false;
   }
-  
-  alert("Success registration");
-  const json1 = JSON.stringify(person);
-  alert(json1);
+  if (register.value == "run") {
+    alert("Success registration");
+    const json1 = JSON.stringify(person);
+    alert(json1);
+  }
 }
 
 // const fs = require("fs");
