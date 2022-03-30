@@ -20,6 +20,19 @@ email.addEventListener("click", validation);
 password.addEventListener("click", validation);
 confirm1.addEventListener("click", validation);
 
+
+function changeBG(el) {
+  var delayInMilliseconds = 500;
+  var elem = document.getElementById(el);
+  setTimeout(function () {
+    // elem.style.color = color1;
+    elem.style.opacity = 1;
+    elem.style.transition = " opacity 1s ";
+  }, delayInMilliseconds);
+  elem.style.opacity = 0;
+}
+
+
 function changeValue() {
   register.value = "run";
   validation();
@@ -53,6 +66,7 @@ function showError(value) {
   document.getElementById(value).innerHTML =
     "<span><svg class='svg1'><use xlink:href='#Capa_1'></use></svg></span>" +
     "incorrect value";
+    changeBG(value);
 }
 
 function showVlid(value) {

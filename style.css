@@ -103,6 +103,7 @@ button:hover {
 }
 
 .pp {
+  opacity: 0;
   color: #dd0b0b;
   height: 16px;
   /* margin-bottom: 0px; */
