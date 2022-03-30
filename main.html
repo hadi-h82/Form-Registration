@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="model">
-      <form class="form" action="https://formspree.io/f/mnqwbpry" method="POST">
+      <form class="form">
         <p class="p1">Registration</p>
         <div class="div">
-          <div class="divv left">
+          <div class="div1">
             <div class="form-group">
               <label for="Name">Full Name</label>
               <input
@@ -25,6 +25,19 @@
               <div class="pp" id="error1">-</div>
             </div>
             <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                id="username"
+                type="text"
+                placeholder=" Enter your username"
+                required
+                name="Username"
+              />
+              <div class="pp" id="error2">-</div>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="form-group">
               <label for="email">Email</label>
               <input
                 id="email"
@@ -36,6 +49,19 @@
               <p class="pp" id="error3">-</p>
             </div>
             <div class="form-group">
+              <label for="Phone">Phone number</label>
+              <input
+                id="Phone"
+                type="number"
+                placeholder=" Enter your Phone number"
+                required
+                name="Phone number"
+              />
+              <div class="pp">-</div>
+            </div>
+          </div>
+          <div class="div3">
+            <div class="form-group">
               <label for="Password">Password</label>
               <input
                 id="Password"
@@ -45,29 +71,6 @@
                 name="password"
               />
               <div class="pp" id="error4">-</div>
-            </div>
-          </div>
-          <div class="divv right">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input
-                id="username"
-                type="text"
-                placeholder=" Enter your username"
-                required
-                name="Username"
-              />
-              <div class="pp" id="error2">-</div>
-            </div>
-            <div class="form-group">
-              <label for="Phone">Phone number</label>
-              <input
-                id="Phone"
-                type="number"
-                placeholder=" Enter your Phone number"
-                name="Phone number"
-              />
-              <div class="pp">-</div>
             </div>
             <div class="form-group">
               <label for="confirm">Confirm Password</label>
